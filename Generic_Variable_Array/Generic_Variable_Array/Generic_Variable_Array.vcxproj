@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{76AEA78A-4B04-407A-8BF8-5DF6980711B4}</ProjectGuid>
+    <ProjectGuid>{A7F3A950-578C-4B9E-9C39-8794C0A12348}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Generic_Variable_Array</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
@@ -146,10 +146,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\Visual Studio 2015\Projects\Lab3_VarArrayClasses\Lab3_VarArrayClasses\varArray.cpp" />
+    <ClInclude Include="varArray.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\Visual Studio 2015\Projects\Lab3_VarArrayClasses\Lab3_VarArrayClasses\varArray.h" />
+    <ClCompile Include="varArray.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
