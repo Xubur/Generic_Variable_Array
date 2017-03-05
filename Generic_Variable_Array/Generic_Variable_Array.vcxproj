@@ -146,6 +146,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\Visual Studio 2015\Projects\Lab3_VarArrayClasses\Lab3_VarArrayClasses\varArray.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\Visual Studio 2015\Projects\Lab3_VarArrayClasses\Lab3_VarArrayClasses\varArray.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
