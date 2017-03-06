@@ -1,12 +1,14 @@
-#include "varArray.h"
+#include "genVarArray.h"
 #include <iostream>
 
-varArray::varArray() {
+template <class Item>
+genVarArray<Item>::genVarArray() {
 	size = 0;
 	dArray = new int[size];
 }
 
-varArray::varArray(const varArray &tmpArray) {
+template <class Item>
+genVarArray<Item>::genVarArray(const genVarArray &tmpArray) {
 	size = tmpArray.size;
 	dArray = new int[size];
 	for (int i = 0; i < size; i++) {
@@ -14,7 +16,8 @@ varArray::varArray(const varArray &tmpArray) {
 	}
 }
 
-varArray& varArray::operator=(const varArray &variableArray) {
+template <class Item>
+genVarArray<Item> genVarArray::operator=(const genVarArray &variableArray) {
 	if (this != &variableArray) {
 		size = variableArray.size;
 		delete[] dArray;
@@ -26,12 +29,14 @@ varArray& varArray::operator=(const varArray &variableArray) {
 	return *this;
 }
 
-varArray::~varArray() {
+template <class Item>
+genVarArray<Item>::~genVarArray() {
 	size = 0;
 	delete[] dArray;
 }
 
-int varArray::check(int number) {
+template <class Item>
+int genVarArray<Item>::check(int number) {
 	for (int i = 0; i < size; ++i) {
 		if (dArray[i] == number)
 			return i;
@@ -39,7 +44,8 @@ int varArray::check(int number) {
 	return -1;
 }
 
-void varArray::addNumber(int num) {
+template <class Item>
+void genVarArray<Item>::add(int num) {
 	int *tmpArray;
 	if (check(num) == -1) {
 		++size;
@@ -53,8 +59,8 @@ void varArray::addNumber(int num) {
 	}
 }
 
-
-void varArray::removeNumber(int num) {
+template <class Item>
+void genVarArray<Item>::remove(int num) {
 	int *tmpArray;
 	int dI = 0, tI = 0;
 	if (check(num) != -1) {
@@ -75,7 +81,8 @@ void varArray::removeNumber(int num) {
 	}
 }
 
-void varArray::output()
+template <class Item>
+void genVarArray<Item>::output()
 {
 	for (int i = 0; i < size; ++i) {
 		std::cout << "{" << dArray[i] << "}";

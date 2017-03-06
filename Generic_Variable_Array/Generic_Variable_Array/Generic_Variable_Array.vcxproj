@@ -146,10 +146,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="varArray.h" />
+    <ClInclude Include="genVarArray.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="varArray.cpp" />
+    <ClCompile Include="genVarArray.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
