@@ -20,7 +20,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="genVarArray.cpp">
+    <ClCompile Include="Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="genVarArray.template">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

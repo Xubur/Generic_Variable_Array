@@ -149,7 +149,8 @@
     <ClInclude Include="genVarArray.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="genVarArray.cpp" />
+    <ClCompile Include="Debug.cpp" />
+    <ClCompile Include="genVarArray.template" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

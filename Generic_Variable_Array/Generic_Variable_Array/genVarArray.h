@@ -5,13 +5,14 @@
 
 #ifndef GENVARARRAY_H
 #define GENVARARRAY_H
+#include "genVarArray.template"
 
 template <class Item>
 class genVarArray{
 public:
 	genVarArray(); // void constructor
 	int arraySize() const { return size; } // returns the size of the array
-	int check(int number); // returns index of element containg "number" or -1 if none
+	int check(Item item); // returns index of element containg "number" or -1 if none
 	void add(Item item);    // adds a member to the array
 	void remove(Item item); // deletes the member from the array
 	void output();      // prints the members of the array
