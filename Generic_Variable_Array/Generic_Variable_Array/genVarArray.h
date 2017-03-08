@@ -5,7 +5,6 @@
 
 #ifndef GENVARARRAY_H
 #define GENVARARRAY_H
-#include "genVarArray.template"
 
 template <class Item>
 class genVarArray{
@@ -27,4 +26,5 @@ private:
 	int size;   // array size
 };
 
+#include "genVarArray.template"
 #endif

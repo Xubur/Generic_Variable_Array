@@ -3,26 +3,26 @@
 template <class Item>
 genVarArray<Item>::genVarArray() {
 	size = 0;
-	dArray = new int[size];
+	dArray = new Item[size];
 }
 
 template <class Item>
 genVarArray<Item>::genVarArray(const genVarArray &tmpArray) {
 	size = tmpArray.size;
-	dArray = new int[size];
+	dArray = new Item[size];
 	for (int i = 0; i < size; i++) {
 		dArray[i] = tmpArray.dArray[i];
 	}
 }
 
 template <class Item>
-genVarArray<Item> genVarArray::operator=(const genVarArray &variableArray) {
-	if (this != &variableArray) {
-		size = variableArray.size;
+genVarArray<Item>& genVarArray<Item>::operator=(const genVarArray<Item>& inArray) {
+	if (this != &inArray) {
+		size = inArray.size;
 		delete[] dArray;
-		dArray = new int[size];
+		dArray = new Item[size];
 		for (int i = 0; i < size; i++) {
-			dArray[i] = variableArray.dArray[i];
+			dArray[i] = inArray.dArray[i];
 		}
 	}
 	return *this;
@@ -60,13 +60,13 @@ void genVarArray<Item>::add(Item item) {
 
 template <class Item>
 void genVarArray<Item>::remove(Item item) {
-	int *tmpArray;
+	Item *tmpArray;
 	int dI = 0, tI = 0;
-	if (check(num) != -1) {
+	if (check(item) != -1) {
 		--size;
-		tmpArray = new int[size];
+		tmpArray = new Item[size];
 		while (tI < size && dI < size + 1) {
-			if (dArray[dI] != num) {
+			if (dArray[dI] != item) {
 				tmpArray[tI] = dArray[dI];
 				dI++;
 				tI++;

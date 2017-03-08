@@ -23,8 +23,10 @@
     <ClCompile Include="Debug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="genVarArray.template">
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="genVarArray.template">
       <Filter>Source Files</Filter>
-    </ClCompile>
+    </None>
   </ItemGroup>
 </Project>
